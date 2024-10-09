@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 09 HTML Forms</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Esse site é para inscrições" />
+  </head>
+  <body>
+    <form method="get">
+      <fieldset>
+        <legend>Formulário de inscrições</legend>
+
+        <section>
+          <label for="name">Nome<span style="color: red">*</span></label>
+          <input
+            required
+            autofocus
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome completo"
+          />
+        </section>
+
+        <section>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+          />
+        </section>
+
+        <div class="boxBirthPhone">
+          <section>
+            <label for="birth">Nascimento</label>
+            <input
+              type="date"
+              id="birth"
+              name="birth"
+              placeholder="Digita sua data de nascimento"
+            />
+          </section>
+
+          <section>
+            <label for="phone">WhatsApp<span style="color: red">*</span></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Digita seu número de telefone"
+              required
+            />
+          </section>
+        </div>
+
+        <section>
+          <label for="curso">Curso</label>
+          <select name="curso" id="curso">
+            <option value="Informática">Informática</option>
+            <option value="Comandos">Comandos</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+          </select>
+        </section>
+
+        <section class="boxShift">
+          <fieldset>
+            <span>
+              <legend>Turno:</legend>
+            </span>
+            <span>
+              <label for="shift">Manhã</label>
+              <input type="radio" id="shift" name="shift" value="morning" />
+            </span>
+            <span>
+              <label for="shift">Tarde</label>
+              <input type="radio" id="shift" name="shift" value="afternoon" />
+            </span>
+            <span>
+              <label for="shift">Noite</label>
+              <input type="radio" id="shift" name="shift" value="night" />
+            </span>
+          </fieldset>
+        </section>
+
+        <section>
+          <label for="obs">Obsevações</label>
+          <textarea
+            name="obs"
+            id="obs"
+            placeholder="Digite uma pergunta"
+            maxlength="240"
+          ></textarea>
+        </section>
+
+        <section class="boxTerm">
+          <span>
+            <input
+              type="checkbox"
+              id="term"
+              name="term"
+              value="true"
+              required
+              oninvalid="this.setCustomValidity('Aceite logo esse caralho, não precisa nem ler po')"
+              oninput="this.setCustomValidity('')"
+            />
+            <label for="term"
+              >Aceita o <a href="#">termo de uso</a>?<span style="color: red"
+                >*</span
+              ></label
+            >
+          </span>
+        </section>
+
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
