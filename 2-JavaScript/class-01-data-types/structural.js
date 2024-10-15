@@ -37,7 +37,7 @@ const pokemon = [
     
        { name: "Charmander", level: 6 },
        { name: "Bulbasaur", level: 7 },
-       { name: "Squirtle", level: 4 }
+       { name: "Squirtle", level: 4 },                                                                                                                                                                    
     
   ];
 
