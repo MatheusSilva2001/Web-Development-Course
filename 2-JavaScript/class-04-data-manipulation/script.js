@@ -47,3 +47,30 @@ const times = [
 
 const randomNumber = Math.floor(Math.random() * times.length);
 console.log(times[randomNumber]);
+
+//array
+
+const city = ["Jucás", "Iguatu", "Cariús", "Fortaleza", "Salvador"];
+console.log(city.length);
+console.log(city[1]);
+console.log(city);
+
+let a = "Matheus";
+a[1] = "B";
+console.log(a);
+
+console.log(city.join("-"));
+console.log("Bem vindo à aula".replaceAll(" ", "-"));
+
+console.log(city.includes("Iguatu"));
+console.log("Matheus Rian da Silva Duarte".split(" "));
+
+console.log(city.reverse());
+console.log("Matheus".split("").reverse().join(""));
+
+function wordCount(text) {
+  const count = text.split(" ").length;
+  return count;
+}
+
+console.log(wordCount("Matheus Rian"));
