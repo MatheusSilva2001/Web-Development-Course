@@ -74,3 +74,52 @@ function wordCount(text) {
 }
 
 console.log(wordCount("Matheus Rian"));
+
+// LIFO
+
+const tvProgramas = ["Breaking Bad", "Game of Thrones", "Stranger Things"];
+
+tvProgramas.pop();
+tvProgramas.pop();
+tvProgramas.push("Bom dia e Cia");
+tvProgramas.push("TV Globinho");
+tvProgramas.pop();
+
+// FIFO
+
+tvProgramas.unshift("TV Cruj");
+tvProgramas.unshift("Castelo Ra tim bum");
+// tvProgramas.shift();
+
+tvProgramas.splice(3, 2);
+tvProgramas.splice(1, 4, "aaaa");
+
+console.log(tvProgramas);
+
+// DATE
+
+const dateNow = new Date();
+// console.log(dateNow);
+// console.log(dateNow.toLocaleString("pt-BR"));
+// console.log(dateNow.toLocaleDateString("pt-BR"));
+// console.log(dateNow.toLocaleTimeString("pt-BR"));
+
+console.log(
+  dateNow.toLocaleString("pt-BR", {
+    weekday: "long",
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+);
+
+const birthday = new Date("2007-01-20 00:00:00");
+
+console.log(birthday);
+document.write((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
+
+console.log(dateNow.getFullYear());
+console.log(birthday.getFullYear());
+console.log(dateNow.getFullYear() - birthday.getFullYear());
