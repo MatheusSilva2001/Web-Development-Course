@@ -118,8 +118,32 @@ console.log(
 const birthday = new Date("2007-01-20 00:00:00");
 
 console.log(birthday);
-document.write((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
+// document.write((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
 
 console.log(dateNow.getFullYear());
 console.log(birthday.getFullYear());
 console.log(dateNow.getFullYear() - birthday.getFullYear());
+
+//desafio
+
+const anoNovo = new Date("2025-01-01 00:00:00");
+
+console.log(anoNovo);
+document.write((anoNovo - dateNow) / 1000 / 60 / 60 / 24);
+
+console.log(dateNow.getFullYear());
+console.log(anoNovo.getFullYear());
+console.log(dateNow.getFullYear() - anoNovo.getFullYear());
+
+// desafio
+
+function palindromo(word) {
+
+  const original = word.replaceAll(" " , "").toLocaleLowerCase();
+
+  const reverse = original.split("").reverse().join("");
+
+  return original == reverse;
+
+}
+console.log(palindromo("A mala nada na lama"));
