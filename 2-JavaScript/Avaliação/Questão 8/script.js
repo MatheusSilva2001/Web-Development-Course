@@ -4,3 +4,4 @@ const newSalaries = salaries.map((salary) => salary * 1.1);
 console.log(newSalaries);
 
 
+
