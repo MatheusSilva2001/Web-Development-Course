@@ -15,7 +15,8 @@ export function App() {
       <div>
         <Button title= "Login" color= "red" />
         <Button title= "Adquirir" color= "blue"/>
-        <Button title= "Sair"/>
+        <Button title= "Sair"
+        />
       </div>
 
       
