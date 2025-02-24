@@ -15,13 +15,13 @@ const UserSchema = z.object({
 export const userControllers = {
   create(req: Request, res: Response, next: NextFunction) {
     try {
-      const { name, series, age } = UserSchema.parse(req.body);
+      const { name, series, age, email } = UserSchema.parse(req.body);
 
       if (!name || !series) {
         throw new AppError(500, "Todos os dados são obrigatórios")
       }
 
-      console.log({ name, series });
+      console.log({ name, series, age, email });
 
       res.status(201).json({ message: "User created successfully" });
     } catch (error) {
